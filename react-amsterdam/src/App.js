@@ -21,6 +21,10 @@ class App extends Component {
         <Route path="/async-mode" component={AsyncMode} />
         <footer>
           <img src={require('./static/footer.svg')} alt=""/>
+          <div className="mt-3 d-flex justify-content-between">
+            <span>Oleksandr Rudin © 2018</span>
+            <span>3Shape</span>
+          </div>
         </footer>
       </div>
     );
