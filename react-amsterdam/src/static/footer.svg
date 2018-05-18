@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1281 145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>divider</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="devider">
+        <rect id="bottom" fill="#f8f8f7" x="0" y="97" width="1279.82813" height="48.3066319"></rect>
+        <polyline id="top" fill="#D0004C" points="0.476715013 0.642578125 1280.64062 145.322266 1280.64062 89.7375441 0.171875 113.667969"></polyline>
+      </g>
+    </g>
+</svg>
