@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import './styles.css';
 
 class LifecycleChanges extends Component {
   render() {
     return (
       <div className="lifecycle-changes">
-      LifecycleChanges
+        <div className="image-container">
+          <img alt="lifecycle" src={require('../../static/lifecycle.jpg')}/>
+        </div>
       </div>
     );
   }

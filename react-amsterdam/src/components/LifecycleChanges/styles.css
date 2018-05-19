@@ -1,0 +1,11 @@
+.lifecycle-changes .image-container {
+    width: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.lifecycle-changes .image-container img {
+    max-width: 100%;
+}
