@@ -5,7 +5,6 @@ import ContextApi from './components/ContextApi/index';
 import RefApi from './components/RefApi/index';
 import LifecycleChanges from './components/LifecycleChanges';
 import StrictMode from './components/StrictMode';
-import AsyncMode from './components/AsyncMode';
 import Navigation from './components/Navigation';
 
 
@@ -18,7 +17,6 @@ class App extends Component {
         <Route path="/ref-api" component={RefApi} />
         <Route path="/lifecycle" component={LifecycleChanges} />
         <Route path="/strict-mode" component={StrictMode} />
-        <Route path="/async-mode" component={AsyncMode} />
         <footer>
           <img src={require('./static/footer.svg')} alt=""/>
           <div className="mt-3 d-flex justify-content-between">

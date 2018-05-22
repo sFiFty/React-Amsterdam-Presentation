@@ -49,7 +49,6 @@ class LifecycleChanges extends Component {
   render() {
     return (
       <div>
-        inner
       </div>
     );
   }

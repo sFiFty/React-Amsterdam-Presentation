@@ -20,9 +20,6 @@ class Navigation extends Component {
             <li className="nav-item">
               <Link className="nav-link" to="/strict-mode">Strict Mode</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/async-mode">Async Mode</Link>
-            </li>
           </ul>
         </nav>
       </header>
