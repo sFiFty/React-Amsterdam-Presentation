@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-
+/**
+ * CREATING CONTEXT HERE
+ */
 const Context = React.createContext('light');
+
+
 class ContextApi extends Component {
   state = {
     language: 'english'
@@ -13,7 +17,8 @@ class ContextApi extends Component {
   render() {
     const {language} = this.state
     return (
-      <Context.Provider value={this.state.language}>
+      
+      <Context.Provider value={this.state.language}> {/* DECLARING CONTEXT HERE */}
         <div className="btn-group btn-group-toggle" data-toggle="buttons">
           <label className={`btn btn-secondary ${language === 'english' ? 'active' : ''}`}>
             <input onChange={() => { this.onChangeLanguage('english') }} type="radio" name="english" id="english" autoComplete="off" checked={language === 'english'} /> ENG
@@ -23,6 +28,7 @@ class ContextApi extends Component {
           </label>
         </div>
         <div className="context-api">
+          {/* BUTTON WRAPPER */}
           <ButtonWrapper />
         </div>
       </Context.Provider>
@@ -30,6 +36,9 @@ class ContextApi extends Component {
   }
 }
 
+/**
+ * WRAPPER HERE
+ */
 class ButtonWrapper extends React.Component {
   render() {
     return (
@@ -38,10 +47,11 @@ class ButtonWrapper extends React.Component {
   }
 }
 
+
 class Button extends React.Component {
   render() {
     return (
-      <Context.Consumer>
+      <Context.Consumer> {/* CONSUMER HERE */}
         {language => <button className="btn btn-success">{language === 'english' ? 'Push the button' : 'Кнопка натискати'}</button>}
       </Context.Consumer>
     );
