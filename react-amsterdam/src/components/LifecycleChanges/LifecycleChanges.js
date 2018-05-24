@@ -3,36 +3,43 @@ import './styles.css';
 
 class LifecycleChangesWrapper extends Component {
   state = {
-    value: 1
+    value: 'React',
+    isImageVisible: true
   }
 
-  componentDidMount() {
+  onClick = () => {
     setTimeout(() => {
-      this.setState({ value: 2 })
-    }, 5000)
+      this.setState({ value: this.state.value + ' is awesome' })
+    }, 3000)
   }
 
   render() {
-    const {value} = this.state
+    const {value, isImageVisible} = this.state
     return (
       <div className="lifecycle-changes">
-        <LifecycleChanges  value={value}  />
-        <div className="image-container">
-          <img alt="lifecycle" src={require('../../static/lifecycle.jpg')}/>
-        </div>
+        {
+          isImageVisible &&
+          <div className="image-container">
+            <span onClick={() => this.setState({ isImageVisible: false })}>X</span>
+            <img alt="lifecycle" src={require('../../static/lifecycle.jpg')}/>
+          </div>
+        }
+        {
+          !isImageVisible &&
+          <Button click={this.onClick} value={value}  />
+        }
       </div>
     );
   }
 }
 
-class LifecycleChanges extends Component {
+class Button extends Component {
 
   state = {
     fromParent: null
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps)
     return {
       fromParent: nextProps.value
     }
@@ -47,9 +54,12 @@ class LifecycleChanges extends Component {
   }
 
   render() {
+    const {fromParent} = this.state;
+    const {click} = this.props
     return (
-      <div>
-      </div>
+      <button onClick={click} className="btn btn-success">
+        {fromParent}
+      </button>
     );
   }
 }

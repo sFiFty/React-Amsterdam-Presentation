@@ -8,4 +8,15 @@
 
 .lifecycle-changes .image-container img {
     max-width: 100%;
+    width: 100%
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container  span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }

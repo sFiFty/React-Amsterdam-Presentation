@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 /**
  * CREATING CONTEXT HERE
  */
-const Context = React.createContext('light');
+const Context = React.createContext('context');
 
 
 class ContextApi extends Component {
