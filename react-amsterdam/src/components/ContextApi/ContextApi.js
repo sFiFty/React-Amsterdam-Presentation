@@ -19,6 +19,7 @@ class ContextApi extends Component {
     return (
       
       <Context.Provider value={this.state.language}> {/* DECLARING CONTEXT HERE */}
+        <h1 className="mb-5 mt-3">Context API</h1>
         <div className="btn-group btn-group-toggle" data-toggle="buttons">
           <label className={`btn btn-secondary ${language === 'english' ? 'active' : ''}`}>
             <input onChange={() => { this.onChangeLanguage('english') }} type="radio" name="english" id="english" autoComplete="off" checked={language === 'english'} /> ENG
@@ -47,11 +48,13 @@ class ButtonWrapper extends React.Component {
   }
 }
 
-
+/**
+ * CONSUMER HERE
+ */
 class Button extends React.Component {
   render() {
     return (
-      <Context.Consumer> {/* CONSUMER HERE */}
+      <Context.Consumer> 
         {language => <button className="btn btn-success">{language === 'english' ? 'Push the button' : 'Кнопка натискати'}</button>}
       </Context.Consumer>
     );
