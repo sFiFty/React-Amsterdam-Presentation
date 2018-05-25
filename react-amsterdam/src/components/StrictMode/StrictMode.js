@@ -25,8 +25,7 @@ class InnerStrictMode extends Component {
 
   render() {
     return (
-      <StrictMode>
-        <div ref="ref" className="strict-mode">
+      <div ref="ref" className="strict-mode">
         <h3>StrictMode currently helps with:</h3>
         <ul className="list-group">
           <li className="list-group-item">Identifying components with unsafe lifecycles</li>
@@ -34,7 +33,6 @@ class InnerStrictMode extends Component {
           <li className="list-group-item">Detecting unexpected side effects</li>
         </ul>
       </div>
-      </StrictMode>
     );
   }
 }

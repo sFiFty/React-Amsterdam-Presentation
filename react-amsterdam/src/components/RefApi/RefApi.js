@@ -23,7 +23,7 @@ class RefApi extends Component {
       <div>
         <h1 className="mb-5 mt-3">Ref API</h1>
         <div className="image-container">
-          <h3>Deprecated</h3>
+          <h3>Old version</h3>
           <img src={require('../../static/old-ref-example.png')} alt="old-ref"/>
         </div>
         <hr/>
