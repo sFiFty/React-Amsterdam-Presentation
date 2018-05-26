@@ -17,9 +17,6 @@ class App extends Component {
         <Route path="/ref-api" component={RefApi} />
         <Route path="/lifecycle" component={LifecycleChanges} />
         <Route path="/strict-mode" component={StrictMode} />
-        <div className="title">
-          Rethinking with React
-        </div>
         <footer>
           <img src={require('./static/footer.svg')} alt=""/>
           <div className="mt-3 d-flex justify-content-between">
